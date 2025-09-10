@@ -16,6 +16,7 @@
       <link expr:href='data:view.url.canonical' rel='canonical'/>
       <data:blog.feedLinks/><data:blog.meTag/>
       <meta expr:content='data:view.description.escaped' name='description'/>
+      <meta name="robots" content="index,follow"/>
       <b:tag cond='data:view.isMultipleItems and data:widgets.Blog.first.posts[0].featuredImage' expr:href='data:widgets.Blog.first.posts[0].featuredImage' name='link' rel='image_src'/>
       <b:tag cond='data:view.isSingleItem and data:view.featuredImage' expr:href='data:view.featuredImage' name='link' rel='image_src'/>
       <!-- Metadata for Open Graph protocol. See http://ogp.me/. -->
