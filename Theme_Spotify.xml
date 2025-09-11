@@ -43,7 +43,7 @@
       <meta expr:content='data:blog.url.canonical' name='twitter:domain'/>
       <meta expr:content='data:view.description.escaped' name='twitter:description'/>
       <b:if cond='data:view.isHomepage'>
-        <script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;<data:view.title.escaped/>&quot;,&quot;url&quot;:&quot;<data:view.url.canonical/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:view.url.canonical/>search?q={search_term_string}&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}}</script>
+        <script type='application/ld+json'>[{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;WebSite&quot;,&quot;name&quot;:&quot;<data:view.title.escaped/>&quot;,&quot;url&quot;:&quot;<data:view.url.canonical/>&quot;,&quot;potentialAction&quot;:{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:&quot;<data:view.url.canonical/>search?q={search_term_string}&quot;,&quot;query-input&quot;:&quot;required name=search_term_string&quot;}},{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;BreadcrumbList&quot;,&quot;itemListElement&quot;:[{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:1,&quot;item&quot;:{&quot;@id&quot;:&quot;<data:blog.homepageUrl.jsonEscaped/>&quot;,&quot;name&quot;:&quot;<data:view.title.escaped/>&quot;}}]}]</script>
       </b:if>
     <link href='https://fonts.googleapis.com' rel='preconnect'/>
     <link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect'/>
@@ -1173,10 +1173,8 @@ body#layout,body#layout div.section{font-family:Arial,sans-serif}body#layout .lo
             </b:includable>
                 <b:includable id='postBreadcrumbs' var='post'>
               <!-- Post Breadcrumbs -->
-              <script type='application/ld+json'>
-              {&quot;@context&quot;:&quot;http:&quot;@type&quot;:&quot;BreadcrumbList&quot;,&quot;@id&quot;:&quot;#Breadcrumb&quot;,&quot;itemListElement&quot;:[{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:1,&quot;item&quot;:{&quot;name&quot;:&quot;<data:messages.home/>&quot;,&quot;@id&quot;:&quot;<data:blog.homepageUrl.jsonEscaped/>&quot;}},{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:2,&quot;item&quot;:{&quot;name&quot;:&quot;<b:if cond='data:post.labels'><data:post.labels.last.name/></b:if>&quot;,&quot;@id&quot;:&quot;<data:post.labels.last.url.jsonEscaped/>&quot;}},{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:3,&quot;item&quot;:{&quot;name&quot;:&quot;<data:post.title/>&quot;,&quot;@id&quot;:&quot;<data:post.url.jsonEscaped/>&quot;}}]}
-            </script>
-            </b:includable>
+                <script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;BreadcrumbList&quot;,&quot;itemListElement&quot;:[{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:1,&quot;item&quot;:{&quot;@id&quot;:&quot;<data:blog.homepageUrl.jsonEscaped/>&quot;,&quot;name&quot;:&quot;<data:messages.home/>&quot;}}<b:if cond='data:post.labels'>,{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:2,&quot;item&quot;:{&quot;@id&quot;:&quot;<data:post.labels.last.url.jsonEscaped/>&quot;,&quot;name&quot;:&quot;<data:post.labels.last.name/>&quot;}}</b:if>,{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:3,&quot;item&quot;:{&quot;@id&quot;:&quot;<data:post.url.jsonEscaped/>&quot;,&quot;name&quot;:&quot;<data:post.title/>&quot;}}]}</script>
+              </b:includable>
                 <b:includable id='postCategory' var='post'>
               <!-- Post Label/Category -->
               <b:if cond='data:view.isMultipleItems and data:post.labels'>
