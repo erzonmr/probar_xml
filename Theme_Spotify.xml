@@ -75,7 +75,7 @@
 </Group>
 
 <Group description="Header items" selector="#main-top">
-  <Variable name="sidebar.title.font" description=" Font" type="font" default="$(interBold18)" value="bold 18px Inter, sans-serif"/>
+  <Variable name="sidebar.title.font" description="Font" type="font" default="$(interBold18)" value="bold 18px Inter, sans-serif"/>
   <Variable name="sidebar.caption.font" description="Sidebar Font caption" type="font" default="$(interNormal16)"  value="normal 16px Inter, sans-serif"/>
 </Group>
 
