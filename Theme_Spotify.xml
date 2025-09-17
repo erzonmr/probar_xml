@@ -53,8 +53,7 @@
 	<script src='https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js'/>
 
   <b:if cond='not data:view.isLayoutMode'>
-    <b:skin version='1.0.1'><![CDATA[
-/*
+    <b:skin version='1.0.1'><![CDATA[/*
 <Variable name="keycolor" description="Main color" type="color" default="#2ebd59"  value="#2ebd59"/>
 <Variable name="interBold18" type="font" default="bold 18px Inter, sans-serif" value="bold 18px Inter, sans-serif"/>
 <Variable name="interNormal16" type="font" default="normal 16px Inter, sans-serif" value="normal 16px Inter, sans-serif"/>
